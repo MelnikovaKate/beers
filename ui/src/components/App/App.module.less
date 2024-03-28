@@ -1,0 +1,25 @@
+@import 'styles/layouts';
+@import 'styles/variables';
+@import 'styles/colors';
+
+.app {
+  padding: 0 150 * @px;
+  background: @background-active;
+  width: 100vw;
+  display: flex;
+
+  .mobile({
+    padding: 0 42 * @px;
+  });
+
+  .tablet({
+    padding: 0 75 * @px;
+  });
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 24 * @px;
+  }
+}

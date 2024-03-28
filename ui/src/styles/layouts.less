@@ -1,0 +1,55 @@
+@import './variables';
+
+.maxBp(@breakpoint, @rules) {
+  @media (max-width: @breakpoint) {
+    @rules();
+  }
+}
+
+.minBp(@breakpoint, @rules) {
+  @media (min-width: @breakpoint) {
+    @rules();
+  }
+}
+
+.mobile(@rules) {
+  @media (max-width: @breakpoints[mobile]) {
+    @rules();
+  }
+}
+
+.tablet(@rules) {
+  @media (min-width: @breakpoints[mobile] + 1 * @px) and (max-width: @breakpoints[tablet]) {
+    @rules();
+  }
+}
+
+.laptop(@rules) {
+  @media (min-width: @breakpoints[tablet] + 1 * @px) and (max-width: @breakpoints[laptop]) {
+    @rules();
+  }
+}
+
+.laptop-large(@rules) {
+  @media (min-width: @breakpoints[laptop] + 1 * @px) and (max-width: @breakpoints[laptopL]) {
+    @rules();
+  }
+}
+
+.desktop(@rules) {
+  @media (min-width: @breakpoints[laptop] + 1 * @px) {
+    @rules();
+  }
+}
+
+.desktop-large(@rules) {
+  @media (min-width: @breakpoints[desktop] + 1 * @px) {
+    @rules();
+  }
+}
+
+.desktop-huge(@rules) {
+  @media (min-width: @breakpoints[desktopL] + 1 * @px) {
+    @rules();
+  }
+}

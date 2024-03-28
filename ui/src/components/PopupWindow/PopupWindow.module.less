@@ -1,0 +1,35 @@
+@import 'styles/colors';
+@import 'styles/variables';
+
+
+.button {
+    border-color: @neutral-text;
+    color: @neutral-text;
+
+    &:hover {
+        background-color: @orange;
+        color: @white !important;
+        border-color: @orange !important;
+    }
+}
+
+.buttonSubmit {
+    background: @dark-blue;
+    color: @white;
+
+    &:hover {
+        background-color: @orange;
+        color: @white !important;
+        border-color: @orange !important;
+    }
+}
+
+.buttonCancel {
+    border-color: @neutral-text;
+    color: @neutral-text;
+
+    &:hover {
+        color: @dark-blue !important;
+        border-color: @dark-blue !important;
+    }
+}
